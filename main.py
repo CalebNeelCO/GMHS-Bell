@@ -1,3 +1,19 @@
-#from 9f85ab77e1a11d0eebdb import *
-from PythonGetTimeNTPServer import get_time
-print(get_time.gettime_ntp())
+import datetime
+
+dict1 = {1: {1:"8:45", 2:"9:40", 3:"10:40", 4:"11:35", 5:"1:05", 6:"2:00", 7:"2:55"}, 2: {1:"8:45", 2:"9:40", 3:"10:40", 4:"11:35", 5:"1:05", 6:"2:00", 7:"2:55"}, 3: {2:"9:15", 4:"11:25", 6:"1:25"}, 4: {1:"9:15", 3:"10:40", 5:"12:40", 7:"2:05", "8":"2:55"}, 5: {11:"34", 2:"9:40", 3:"10:40", 4:"11:35", 5:"1:05", 6:"2:00", 7:"2:55"}}
+
+
+c = True
+while c:
+    time = datetime.datetime.now()
+    day = time.weekday() + 1
+    hour = time.hour
+    mini = time.minute
+    
+    per = dict1[day][hour]
+    #print(per + mini )
+    if(mini == int(per)):
+        print("ring")
+    
+    
+
